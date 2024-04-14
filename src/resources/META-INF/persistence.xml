@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+	version="2.2">
+
+	<persistence-unit name="persistenceJPA"
+		transaction-type="RESOURCE_LOCAL">
+		<!-- Suas entidades aqui -->
+		<class>com.sistema.controll.Principal</class>
+
+		<properties>
+			<!-- Configurações de acesso ao banco de dados -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost:3306/robo_operacao_cripto?createDatabaseIfNotExist=true&amp;serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
+
+			<property name="javax.persistence.jdbc.user"
+				value="administrador" />
+			<property name="javax.persistence.jdbc.password"
+				value="sistema@486231" />
+
+			<!-- Configurações específicas do Hibernate -->
+			<property name="hibernate.dialect"
+				value="org.hibernate.dialect.MySQL8Dialect" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+
+			<!-- Atualização automática do schema do banco de dados -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+			<!-- Configuração de charset e collation -->
+			<property name="hibernate.connection.characterEncoding"
+				value="UTF-8" />
+			<property name="hibernate.connection.useUnicode"
+				value="true" />
+			<property name="hibernate.connection.charSet" value="UTF-8" />
+		</properties>
+	</persistence-unit>
+</persistence>

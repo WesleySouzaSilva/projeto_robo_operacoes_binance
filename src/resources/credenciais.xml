@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<credenciais>
+    <KUCOIN_API_KEY>seus dados</KUCOIN_API_KEY>
+    <KUCOIN_SECRET_KEY>seus dados</KUCOIN_SECRET_KEY>
+    <KUCOIN_PASS_PHRASE>seus dados</KUCOIN_PASS_PHRASE>
+    <BINANCE_API_KEY>seus dados</BINANCE_API_KEY>
+    <BINANCE_SECRET_KEY>seus dados</BINANCE_SECRET_KEY>
+    <GMAIL_USER>seus dados</GMAIL_USER>
+    <GMAIL_PASSWORD>seus dados</GMAIL_PASSWORD>
+    <EMAIL_DESTINO>seus dados</EMAIL_DESTINO>
+    <DISCORD_TOKEN>seus dados</DISCORD_TOKEN>
+    <DISCORD_PERMISSION_INT>8</DISCORD_PERMISSION_INT>
+    <DISCORD_CHANNEL_ID>seus dados</DISCORD_CHANNEL_ID>
+    <TELEGRAN_GROUP_ID>-seus dados</TELEGRAN_GROUP_ID>
+    <TELEGRAM_TOKEN>seus dados</TELEGRAM_TOKEN>
+    <DEBUG>True</DEBUG>
+</credenciais>
