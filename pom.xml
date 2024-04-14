@@ -78,7 +78,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>controll.Principal</mainClass>
+							<mainClass>com.sistema.controll.Principal</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
