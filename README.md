@@ -95,3 +95,6 @@ Agradecemos a todos os contribuidores que ajudaram a tornar este projeto possív
 
 ## Autor
 Este projeto foi desenvolvido por Wesley Souza.
+
+## Termos de Uso
+Este projeto esta aberto para a comunidade, sendo assim o autor não se responsabiliza por perdas ou ganho, de qualquer natureza, envolvendo esse codigo. Cada ajuste e implementação, fica de responsabilidade de quem esta usando o projeto.
