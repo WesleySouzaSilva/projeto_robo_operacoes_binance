@@ -59,6 +59,13 @@
 			<version>1.2.4</version>
 		</dependency>
 
+		<!-- hibernate Core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.6.3.Final</version>
+		</dependency>
+
 
 	</dependencies>
 
