@@ -1,14 +1,14 @@
-# RobÙ de NegociaÁ„o de Criptomoedas na Binance
+# Rob√¥ de Negocia√ß√£o de Criptomoedas na Binance
 
-Este projeto È uma aplicaÁ„o em Java 17 que automatiza a compra e venda de criptomoedas na plataforma Binance. Ele permite aos usu·rios definirem estratÈgias personalizadas para negociaÁ„o, aproveitando as oportunidades do mercado de criptomoedas.
+Este projeto √© uma aplica√ß√£o em Java 17 que automatiza a compra e venda de criptomoedas na plataforma Binance. Ele permite aos usu√°rios definirem estrat√©gias personalizadas para negocia√ß√£o, aproveitando as oportunidades do mercado de criptomoedas.
 
-## PrÈ-requisitos
+## Pr√©-requisitos
 
 Antes de usar este projeto, certifique-se de ter os seguintes requisitos:
 
 - Java 17 instalado no seu sistema.
-- MySQL instalado para armazenar os detalhes das operaÁıes do robÙ.
-- Um arquivo `credenciais.xml` deve ser incluÌdo no projeto, contendo as informaÁıes de autenticaÁ„o da Binance e outras credenciais necess·rias para o funcionamento correto do robÙ.
+- MySQL instalado para armazenar os detalhes das opera√ß√µes do rob√¥.
+- Um arquivo `credenciais.xml` deve ser inclu√≠do no projeto, contendo as informa√ß√µes de autentica√ß√£o da Binance e outras credenciais necess√°rias para o funcionamento correto do rob√¥.
 
 ## Estrutura do arquivo `credenciais.xml`
 
@@ -36,39 +36,39 @@ O arquivo `credenciais.xml` deve seguir a seguinte estrutura:
 
 ```
 
-## ConfiguraÁ„o
+## Configura√ß√£o
 
 ### 1. Credenciais da Binance
 
-Antes de comeÁar, È necess·rio gerar as credenciais de acesso na plataforma Binance. ApÛs obtÍ-las, inclua-as no arquivo `credenciais.xml` conforme a estrutura especificada na seÁ„o anterior.
+Antes de come√ßar, √© necess√°rio gerar as credenciais de acesso na plataforma Binance. Ap√≥s obt√™-las, inclua-as no arquivo `credenciais.xml` conforme a estrutura especificada na se√ß√£o anterior.
 
 ### 2. Banco de Dados MySQL
 
-… necess·rio configurar um banco de dados MySQL para armazenar os detalhes das operaÁıes do robÙ. Siga os passos abaixo para configurar o banco de dados:
+√â necess√°rio configurar um banco de dados MySQL para armazenar os detalhes das opera√ß√µes do rob√¥. Siga os passos abaixo para configurar o banco de dados:
 
 1. Acesse o MySQL e crie um novo banco de dados para o projeto.
 
-2. Crie um novo usu·rio e senha para o banco de dados.
+2. Crie um novo usu√°rio e senha para o banco de dados.
 
-3. Conceda as permissıes necess·rias para o novo usu·rio sobre o banco de dados criado.
+3. Conceda as permiss√µes necess√°rias para o novo usu√°rio sobre o banco de dados criado.
 
-4. Atualize as configuraÁıes de conex„o com o banco de dados no arquivo do projeto, conforme necess·rio.
+4. Atualize as configura√ß√µes de conex√£o com o banco de dados no arquivo do projeto, conforme necess√°rio.
 
-## ExecuÁ„o
+## Execu√ß√£o
 
-### CompilaÁ„o via Maven
+### Compila√ß√£o via Maven
 
-Antes de executar o robÙ, È necess·rio compilar o projeto usando o Maven. 
+Antes de executar o rob√¥, √© necess√°rio compilar o projeto usando o Maven. 
 
-ExecuÁ„o no Windows
-Se o seu sistema operacional for Windows, vocÍ pode executar o robÙ usando o arquivo executar-robo.bat. Este arquivo acessar· o Java via linha de comando e apontar· para o arquivo compilado do Maven. Execute o seguinte comando via linha de comando:
+Execu√ß√£o no Windows
+Se o seu sistema operacional for Windows, voc√™ pode executar o rob√¥ usando o arquivo executar-robo.bat. Este arquivo acessar√° o Java via linha de comando e apontar√° para o arquivo compilado do Maven. Execute o seguinte comando via linha de comando:
 
 ```bash
 executar-robo.bat
 ```
 
-ExecuÁ„o em outros sistemas operacionais
-Para sistemas operacionais diferentes do Windows, vocÍ pode executar o arquivo compilado diretamente via linha de comando. Use o seguinte comando na raiz do projeto:
+Execu√ß√£o em outros sistemas operacionais
+Para sistemas operacionais diferentes do Windows, voc√™ pode executar o arquivo compilado diretamente via linha de comando. Use o seguinte comando na raiz do projeto:
 
 ```bash
 java -jar caminho/do/arquivo/compilado.jar
@@ -77,20 +77,21 @@ java -jar caminho/do/arquivo/compilado.jar
 Certifique-se de substituir caminho/do/arquivo/compilado.jar pelo caminho correto do arquivo compilado do Maven.
 
 
-## LicenÁa
-Este projeto È disponibilizado sob a licenÁa MIT.
+## Licen√ßa
+Este projeto √© disponibilizado sob a licen√ßa MIT.
 
 ## Contato
-Se vocÍ tiver d˙vidas, sugestıes ou quiser contribuir para o projeto, sinta-se ‡ vontade para entrar em contato atravÈs dos seguintes meios:
+Se voc√™ tiver d√∫vidas, sugest√µes ou quiser contribuir para o projeto, sinta-se √† vontade para entrar em contato atrav√©s dos seguintes meios:
 
 Email: wsystec.sistema@gmail.com
+
 GitHub Issues: https://github.com/WesleySouzaSilva/projeto_robo_operacoes_binance
 
-##Estado do Projeto
-Atualmente, o projeto est· em desenvolvimento ativo. Novas funcionalidades est„o sendo adicionadas e melhorias est„o sendo feitas continuamente.
+## Estado do Projeto
+Atualmente, o projeto est√° em desenvolvimento ativo. Novas funcionalidades est√£o sendo adicionadas e melhorias est√£o sendo feitas continuamente.
 
-##Agradecimentos
-Agradecemos a todos os contribuidores que ajudaram a tornar este projeto possÌvel.
+## Agradecimentos
+Agradecemos a todos os contribuidores que ajudaram a tornar este projeto poss√≠vel.
 
-##Autor
+## Autor
 Este projeto foi desenvolvido por Wesley Souza.
