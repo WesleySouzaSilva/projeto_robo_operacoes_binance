@@ -1,7 +1,5 @@
 package com.sistema.model;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
@@ -34,47 +32,49 @@ public class Credenciais {
 	private String debug;
 
 	public Credenciais() {
-	    carregarCredenciais("resources/crecredenciais.xml");
+		carregarCredenciais("credenciais.xml");
 	}
 
 	private void carregarCredenciais(String xmlFilePath) {
-	    try {
-	        File file = new File(xmlFilePath);
-	        InputStream inputStream = new FileInputStream(file);
+		try {
+			InputStream inputStream = getClass().getClassLoader().getResourceAsStream(xmlFilePath);
+			if (inputStream != null) {
+				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+				Document doc = dBuilder.parse(inputStream);
 
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(inputStream);
+				doc.getDocumentElement().normalize();
 
-			doc.getDocumentElement().normalize();
+				NodeList nodeList = doc.getElementsByTagName("credenciais");
 
-			NodeList nodeList = doc.getElementsByTagName("credenciais");
+				for (int temp = 0; temp < nodeList.getLength(); temp++) {
+					Node node = nodeList.item(temp);
 
-			for (int temp = 0; temp < nodeList.getLength(); temp++) {
-				Node node = nodeList.item(temp);
+					if (node.getNodeType() == Node.ELEMENT_NODE) {
+						Element element = (Element) node;
 
-				if (node.getNodeType() == Node.ELEMENT_NODE) {
-					Element element = (Element) node;
-
-					kucoinApiKey = element.getElementsByTagName("KUCOIN_API_KEY").item(0).getTextContent();
-					kucoinSecretKey = element.getElementsByTagName("KUCOIN_SECRET_KEY").item(0).getTextContent();
-					kucoinPassPhrase = element.getElementsByTagName("KUCOIN_PASS_PHRASE").item(0).getTextContent();
-					binanceApiKey = element.getElementsByTagName("BINANCE_API_KEY").item(0).getTextContent();
-					binanceSecretKey = element.getElementsByTagName("BINANCE_SECRET_KEY").item(0).getTextContent();
-					gmailUser = element.getElementsByTagName("GMAIL_USER").item(0).getTextContent();
-					gmailPassword = element.getElementsByTagName("GMAIL_PASSWORD").item(0).getTextContent();
-					emailDestino = element.getElementsByTagName("EMAIL_DESTINO").item(0).getTextContent();
-					discordToken = element.getElementsByTagName("DISCORD_TOKEN").item(0).getTextContent();
-					discordPermissionInt = element.getElementsByTagName("DISCORD_PERMISSION_INT").item(0)
-							.getTextContent();
-					discordChannelId = element.getElementsByTagName("DISCORD_CHANNEL_ID").item(0).getTextContent();
-					telegranGroupId = element.getElementsByTagName("TELEGRAN_GROUP_ID").item(0).getTextContent();
-					telegramToken = element.getElementsByTagName("TELEGRAM_TOKEN").item(0).getTextContent();
-					debug = element.getElementsByTagName("DEBUG").item(0).getTextContent();
+						kucoinApiKey = element.getElementsByTagName("KUCOIN_API_KEY").item(0).getTextContent();
+						kucoinSecretKey = element.getElementsByTagName("KUCOIN_SECRET_KEY").item(0).getTextContent();
+						kucoinPassPhrase = element.getElementsByTagName("KUCOIN_PASS_PHRASE").item(0).getTextContent();
+						binanceApiKey = element.getElementsByTagName("BINANCE_API_KEY").item(0).getTextContent();
+						binanceSecretKey = element.getElementsByTagName("BINANCE_SECRET_KEY").item(0).getTextContent();
+						gmailUser = element.getElementsByTagName("GMAIL_USER").item(0).getTextContent();
+						gmailPassword = element.getElementsByTagName("GMAIL_PASSWORD").item(0).getTextContent();
+						emailDestino = element.getElementsByTagName("EMAIL_DESTINO").item(0).getTextContent();
+						discordToken = element.getElementsByTagName("DISCORD_TOKEN").item(0).getTextContent();
+						discordPermissionInt = element.getElementsByTagName("DISCORD_PERMISSION_INT").item(0)
+								.getTextContent();
+						discordChannelId = element.getElementsByTagName("DISCORD_CHANNEL_ID").item(0).getTextContent();
+						telegranGroupId = element.getElementsByTagName("TELEGRAN_GROUP_ID").item(0).getTextContent();
+						telegramToken = element.getElementsByTagName("TELEGRAM_TOKEN").item(0).getTextContent();
+						debug = element.getElementsByTagName("DEBUG").item(0).getTextContent();
+					}
 				}
+			} else {
+				System.out.println("Arquivo XML nao encontrado: " + xmlFilePath);
 			}
-	    } catch (FileNotFoundException e) {
-	        System.out.println("Arquivo XML não encontrado: " + xmlFilePath);
+		} catch (FileNotFoundException e) {
+			System.out.println("Arquivo XML nï¿½o encontrado: " + xmlFilePath);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
